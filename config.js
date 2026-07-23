@@ -61,12 +61,12 @@ const CONFIG = {
     // Drop images into the photos/ folder and reference them here.
     // Leave src as "" for a pretty placeholder frame.
     photos: [
-      { src: "", caption: "the day it all started" },
-      { src: "", caption: "that one evening" },
-      { src: "", caption: "your favourite place" },
-      { src: "", caption: "my favourite person" },
-      { src: "", caption: "partners in crime" },
-      { src: "", caption: "many more to come" },
+      { src: "photos/01.jpg", caption: "the day we first kissed" },
+      { src: "photos/02.jpeg", caption: "ah yes, skilled indeed" },
+      { src: "photos/03.jpeg", caption: "oh my god that dress, hottest girl ever" },
+      { src: "photos/05.jpeg", caption: "my favourite person" },
+      { src: "photos/04.jpeg", caption: "partners in crime" },
+      { src: "photos/06.jpeg", caption: "first movie date, and many more to come" },
     ],
   },
 
@@ -230,7 +230,7 @@ const CONFIG = {
     greeting: "Dear Tulip,",
     paragraphs: [
       "Nineteen. I've been trying to write this for days, and every draft came out the same way: I'm just really, really glad you exist.",
-      "I couldn't fold you paper tulips — you've seen my origami, it's a crime scene — so I built you this instead. A garden that blooms when you touch it, flowers that never wilt, and a studio where every fold comes out right. It felt like a fair trade.",
+      "I couldn't fold you paper tulips — my origami, it's a crime scene — so I built you this instead. A garden that blooms when you touch it, flowers that never wilt, and a studio where every fold comes out right. It felt like a fair trade.",
       "Thank you for every walk, every late-night call, every time you laughed at a joke that did not deserve it. Being yours is the easiest thing I do.",
       "Happy birthday, my Tulip. Here's to nineteen, and to every year I get to stand next to you while you bloom.",
     ],
