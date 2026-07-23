@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#140f1e" />
+  <title>for Tulip 🌷</title>
+  <meta name="description" content="A little garden, grown for someone special." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌷</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- god rays / petal canvas -->
+  <canvas id="petal-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════ MIDNIGHT GATE ═══════════ -->
+  <div id="gate" class="gate" hidden>
+    <div class="gate-stars" aria-hidden="true"></div>
+    <div class="gate-inner">
+      <div class="gate-bud" aria-hidden="true">🌷</div>
+      <p class="gate-kicker">something is blooming for</p>
+      <h1 class="gate-name">Tulip</h1>
+      <div class="gate-count" id="gate-count" role="timer" aria-live="polite">
+        <div class="gc-cell"><span id="gc-d">0</span><label>days</label></div>
+        <div class="gc-cell"><span id="gc-h">00</span><label>hours</label></div>
+        <div class="gc-cell"><span id="gc-m">00</span><label>minutes</label></div>
+        <div class="gc-cell"><span id="gc-s">00</span><label>seconds</label></div>
+      </div>
+      <p class="gate-hint">come back at midnight&hellip;</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ SITE ═══════════ -->
+  <div id="site" hidden>
+
+    <nav class="nav" aria-label="Sections">
+      <a class="nav-brand" href="#home">🌷<span> Tulip&nbsp;· 19</span></a>
+      <div class="nav-links">
+        <a href="#garden">Garden</a>
+        <a href="#studio">Studio</a>
+        <a href="#photos">Photos</a>
+        <a href="#letter">Letter</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <p class="hero-kicker" id="hero-kicker"></p>
+      <h1 class="hero-title" id="hero-title"></h1>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <a class="hero-cta" href="#garden">enter the garden <span class="cta-arrow">↓</span></a>
+    </header>
+
+    <!-- GARDEN -->
+    <section class="section garden" id="garden">
+      <h2 class="section-title" id="garden-title"></h2>
+      <p class="section-intro" id="garden-intro"></p>
+      <p class="garden-progress" id="garden-progress" aria-live="polite"></p>
+      <div class="garden-field" id="garden-field"></div>
+    </section>
+
+    <!-- ORIGAMI STUDIO -->
+    <section class="section studio" id="studio">
+      <h2 class="section-title" id="studio-title"></h2>
+      <p class="section-intro" id="studio-intro"></p>
+
+      <div class="studio-card">
+        <!-- color picker -->
+        <div class="studio-colors" id="studio-colors">
+          <p class="studio-step-label">pick your paper</p>
+          <div class="swatches" id="swatches"></div>
+        </div>
+
+        <!-- folding stage -->
+        <div class="studio-stagewrap">
+          <div class="studio-stage" id="studio-stage">
+            <div class="stage-paper" id="stage-paper"></div>
+          </div>
+          <p class="studio-instruction" id="studio-instruction"></p>
+          <div class="studio-actions">
+            <button class="btn btn-ghost" id="btn-restart" hidden>start over</button>
+            <button class="btn btn-primary" id="btn-fold">unfold the paper</button>
+          </div>
+        </div>
+
+        <!-- bouquet -->
+        <div class="bouquet-wrap">
+          <p class="studio-step-label">your bouquet</p>
+          <div class="bouquet" id="bouquet">
+            <div class="bouquet-flowers" id="bouquet-flowers"></div>
+            <svg class="bouquet-vase" viewBox="0 0 120 90" aria-hidden="true">
+              <path d="M18 4 h84 l-10 18 c-3 6 -3 10 0 16 l8 20 c6 16 -8 32 -26 32 h-28 c-18 0 -32 -16 -26 -32 l8 -20 c3 -6 3 -10 0 -16 Z"
+                    fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+              <ellipse cx="60" cy="6" rx="42" ry="4" fill="rgba(255,255,255,.16)"/>
+            </svg>
+          </div>
+          <p class="bouquet-count" id="bouquet-count">no tulips yet — fold your first one!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="section gallery" id="photos">
+      <h2 class="section-title" id="gallery-title"></h2>
+      <p class="section-intro" id="gallery-intro"></p>
+      <div class="polaroids" id="polaroids"></div>
+    </section>
+
+    <!-- LETTER -->
+    <section class="section letter-section" id="letter">
+      <h2 class="section-title" id="letter-title"></h2>
+      <div class="envelope-zone" id="envelope-zone">
+        <button class="envelope" id="envelope" aria-label="Open the letter">
+          <div class="env-back"></div>
+          <div class="env-letter-peek"></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="env-seal">🌷</div>
+        </button>
+        <p class="envelope-hint">tap to open</p>
+      </div>
+      <article class="letter-paper" id="letter-paper" hidden>
+        <p class="letter-greeting" id="letter-greeting"></p>
+        <div id="letter-body"></div>
+        <p class="letter-signoff" id="letter-signoff"></p>
+        <p class="letter-signature" id="letter-signature"></p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>made with all my heart, and zero paper cuts 🌷</p>
+    </footer>
+  </div>
+
+  <!-- note modal -->
+  <div class="modal" id="note-modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="note-num">
+      <div class="modal-tulip" id="modal-tulip"></div>
+      <p class="modal-num" id="note-num"></p>
+      <p class="modal-text" id="note-text"></p>
+      <button class="btn btn-primary" data-close>🌷 keep blooming</button>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="tulip.js"></script>
+  <script src="garden.js"></script>
+  <script src="origami.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
