@@ -17,7 +17,7 @@ function initDaily() {
   }
 
   card.innerHTML = `
-    <div class="daily-tulip">${tulipSVG(dayIndex % TULIP_PALETTES.length, { sway: true })}</div>
+    <div class="daily-tulip">${tulipSVG(Math.max(0, dayIndex) % TULIP_PALETTES.length, { sway: true })}</div>
     <p class="daily-heading">${heading}</p>
     <p class="daily-text"></p>`;
   card.querySelector(".daily-text").textContent = text;
