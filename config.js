@@ -16,7 +16,7 @@ const CONFIG = {
   previewKey: "sneakpeek",
 
   hero: {
-    kicker: "it's finally your day",
+    kicker: "it's finally your day, cupcake",
     title: "Happy 19th, Tulip",
     tagline: "I grew you a garden. It only blooms for you.",
   },
@@ -84,6 +84,8 @@ const CONFIG = {
       "psst — happy 19th. from both of us. 🌷",
       "he made a whole Eras section for you. red pandas know every bridge by heart, obviously.",
       "nineteen. in her prime, entering her most iconic era. that's you.",
+      "he calls you cupcake because you're sweet. also because he's permanently hungry. both are true.",
+      "cupcake, princess, cutiepie, wifey… he has a whole roster. you answer to all of them. iconic.",
     ],
   },
 
@@ -99,7 +101,7 @@ const CONFIG = {
     title: "Catch the Falling Tulips",
     intro:
       "He fumbles real flowers. You won't. Move the basket and catch nineteen before they touch the ground — they float back up anyway; nothing sad happens in this garden.",
-    win: "Nineteen caught! You'd catch every single one — just like you caught him. 🌷",
+    win: "Nineteen caught! You'd catch every single one — just like you caught him. Elite wifey reflexes. 🌷",
   },
 
   story: {
@@ -150,6 +152,21 @@ const CONFIG = {
       { era: "Showgirl", emoji: "🧡", theme: "showgirl", text: "Curtain up on nineteen — your most dazzling era yet." },
     ],
     outro: "Which era are we in right now? All of them. At once. Always.",
+    bracelet: {
+      label: "friendship bracelet studio",
+      intro: "You know the tradition. Type a word, string the beads, stack them up.",
+      presets: ["CUPCAKE", "TULIP♥19", "SWIFTIE", "WIFEY", "LOVER"],
+      // her stack starts with one he already made her
+      starter: "KNIGHT♥TULIP",
+    },
+  },
+
+  cupcake: {
+    title: "A Cupcake for a Cupcake",
+    intro:
+      "He calls you Cupcake for a reason. So here's a bakery of your own — pick a liner, swirl the frosting, pile on the toppings, and serve.",
+    serveLine: "Officially the second sweetest cupcake in existence. You remain first, cupcake. Obviously.",
+    boxLine: "your cupcake box",
   },
 
   openwhen: {
@@ -202,6 +219,9 @@ const CONFIG = {
       "New day, same answer: still you. Always you.",
       "The garden's still blooming. So are you.",
       "One more day of you being nineteen and me being lucky.",
+      "Good morning, cupcake. That's it. That's the note.",
+      "Cutiepie status: verified again this morning. The committee was unanimous.",
+      "Wifey behaviour detected yesterday. Keep it up.",
     ],
   },
 

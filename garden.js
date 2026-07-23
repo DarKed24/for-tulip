@@ -19,7 +19,7 @@ function initGarden() {
 
   function updateProgress() {
     if (bloomed.size === total) {
-      progress.innerHTML = `all ${total} bloomed 🌷 — the whole garden is yours`;
+      progress.innerHTML = `all ${total} bloomed 🌷 — the whole garden is yours, cutiepie`;
       if (!progress.dataset.celebrated) {
         progress.dataset.celebrated = "1";
         const r = progress.getBoundingClientRect();

@@ -47,6 +47,7 @@
         <a href="#photos">Photos</a>
         <a href="#story">Story</a>
         <a href="#eras">Eras</a>
+        <a href="#cupcake">Cupcake</a>
         <a href="#openwhen">Open&nbsp;when</a>
         <a href="#coupons">Coupons</a>
         <a href="#daily">Daily</a>
@@ -165,7 +166,30 @@
       <p class="section-intro" id="eras-intro"></p>
       <div class="eras-grid" id="eras-grid"></div>
       <p class="eras-outro" id="eras-outro"></p>
-      <div class="eras-bracelet" id="eras-bracelet" aria-hidden="true"></div>
+      <div class="bracelet-maker" id="bracelet-maker"></div>
+    </section>
+
+    <!-- CUPCAKE -->
+    <section class="section cupcake-section" id="cupcake">
+      <h2 class="section-title" id="cc-title"></h2>
+      <p class="section-intro" id="cc-intro"></p>
+      <div class="cc-card">
+        <div class="cc-stage" id="cc-stage"></div>
+        <div class="cc-panel">
+          <p class="studio-step-label">liner</p>
+          <div class="swatches swatches-row" id="cc-liners"></div>
+          <p class="studio-step-label">frosting</p>
+          <div class="swatches swatches-row" id="cc-frostings"></div>
+          <p class="studio-step-label">toppings</p>
+          <div class="cc-toppings" id="cc-toppings"></div>
+          <button class="btn btn-primary" id="cc-serve">serve it 🧁</button>
+          <p class="cc-line" id="cc-line" aria-live="polite"></p>
+        </div>
+        <div class="cc-boxwrap">
+          <p class="studio-step-label" id="cc-box-label" hidden></p>
+          <div class="cc-box" id="cc-box"></div>
+        </div>
+      </div>
     </section>
 
     <!-- OPEN WHEN -->
@@ -236,6 +260,8 @@
   <script src="game.js"></script>
   <script src="storybook.js"></script>
   <script src="eras.js"></script>
+  <script src="bracelet.js"></script>
+  <script src="cupcake.js"></script>
   <script src="openwhen.js"></script>
   <script src="coupons.js"></script>
   <script src="daily.js"></script>

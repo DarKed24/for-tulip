@@ -33,17 +33,6 @@ function initEras() {
     grid.appendChild(el);
   });
 
-  // friendship bracelet: beads spelling her name + age on a string
-  const bracelet = document.getElementById("eras-bracelet");
-  const beads = "TULIP♥19".split("");
-  const beadColors = ["#fb6f92", "#ffd28a", "#b06ee0", "#8ac4e8", "#a8dcc0", "#fff0f3", "#e63956", "#ffb347"];
-  bracelet.innerHTML = beads
-    .map(
-      (ch, i) =>
-        `<span class="bead" style="background:${beadColors[i % beadColors.length]};transform:rotate(${((i * 47) % 17) - 8}deg)">${ch}</span>`
-    )
-    .join("");
-
   // observe the freshly added cards for the scroll-reveal
   const io = new IntersectionObserver(
     (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("on")),

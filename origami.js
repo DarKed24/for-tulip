@@ -316,7 +316,7 @@ function initStudio() {
     hideFoldLine();
     stepIdx = -1;
     btnRestart.hidden = true;
-    instructionEl.textContent = "Pick a paper colour, then unfold your sheet.";
+    instructionEl.textContent = "Pick a paper colour, cupcake — then unfold your sheet.";
     btnFold.textContent = "unfold the paper";
     btnFold.disabled = false;
     busy = false;
@@ -370,6 +370,6 @@ function initStudio() {
   });
   btnRestart.addEventListener("click", () => resetStudio(true));
 
-  instructionEl.textContent = "Pick a paper colour, then unfold your sheet.";
+  instructionEl.textContent = "Pick a paper colour, cupcake — then unfold your sheet.";
   renderBouquet();
 }

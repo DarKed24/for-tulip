@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initGallery();
   initStorybook();
   initEras();
+  initBracelet();
+  initCupcake();
   initOpenWhen();
   initCoupons();
   initDaily();
@@ -42,6 +44,8 @@ function injectContent() {
   set("story-intro", CONFIG.story.intro);
   set("eras-title", CONFIG.eras.title);
   set("eras-intro", CONFIG.eras.intro);
+  set("cc-title", CONFIG.cupcake.title);
+  set("cc-intro", CONFIG.cupcake.intro);
   set("ow-title", CONFIG.openwhen.title);
   set("ow-intro", CONFIG.openwhen.intro);
   set("coupon-title", CONFIG.coupons.title);
