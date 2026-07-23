@@ -70,6 +70,63 @@ const CONFIG = {
     ],
   },
 
+  panda: {
+    // The little red panda in the corner. Tap him and he talks.
+    lines: [
+      "hi princess 🐾 I'm the red panda. he couldn't attend in mascot form, so I'm filling in.",
+      "you called him a red panda once. he never recovered. now I exist.",
+      "did you find all 19 tulips in the garden? I counted. I'm watching.",
+      "he practiced folding real paper tulips for you. it went… badly. hence the studio.",
+      "fun fact: red pandas are excellent judges of character. you chose well. mostly.",
+      "blow out the candles yet? I already licked the frosting. sorry.",
+      "you look great today. the red panda never lies.",
+      "he wrote and rewrote your letter like six times. I watched. it was adorable.",
+      "psst — happy 19th. from both of us. 🌷",
+    ],
+  },
+
+  cake: {
+    title: "Nineteen Candles",
+    intro:
+      "One for every year. Tap each flame to blow it out — and when the last one goes dark, make a wish.",
+    wish: "Make a wish, princess ✨ Your knight is already working on it.",
+    done: "Nineteen wishes, all noted, all in progress. 🌷",
+  },
+
+  game: {
+    title: "Catch the Falling Tulips",
+    intro:
+      "He fumbles real flowers. You won't. Move the basket and catch nineteen before they touch the ground — they float back up anyway; nothing sad happens in this garden.",
+    win: "Nineteen caught! You'd catch every single one — just like you caught him. 🌷",
+  },
+
+  story: {
+    title: "The Princess & Her Knight",
+    intro: "A short, entirely true story. Tap through.",
+    pages: [
+      {
+        art: "castle",
+        text: "Once upon a time, in a kingdom that looked suspiciously like our institute, there lived a princess named Tulip.",
+      },
+      {
+        art: "knight",
+        text: "She was guarded — loosely speaking — by a knight. Brave of heart, loyal to a fault, tragically bad at origami.",
+      },
+      {
+        art: "panda",
+        text: "The princess, wise as she was beautiful, took one look at her knight and declared him… a red panda. The royal court agreed instantly. There was no appeal.",
+      },
+      {
+        art: "garden",
+        text: "So the red-panda knight did what any knight would do for his princess: he grew her a garden that could never wilt, and folded her tulips that would never crumple.",
+      },
+      {
+        art: "heart",
+        text: "And they lived happily — this is chapter nineteen of a story that's only getting started. The end. (For now.)",
+      },
+    ],
+  },
+
   letter: {
     title: "One last thing…",
     greeting: "Dear Tulip,",
@@ -80,6 +137,6 @@ const CONFIG = {
       "Happy birthday, my Tulip. Here's to nineteen, and to every year I get to stand next to you while you bloom.",
     ],
     signoff: "All my love, always,",
-    signature: "— me 🌷",
+    signature: "— your knight (and part-time red panda) 🌷",
   },
 };

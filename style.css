@@ -403,6 +403,141 @@ a { color: inherit; text-decoration: none; }
 .letter-signoff { margin-top: 26px; font-style: italic; }
 .letter-signature { font-size: 1.3em; font-weight: 600; margin-top: 6px; color: var(--pink-deep); }
 
+/* ═══════════════════ cake ═══════════════════ */
+.cake-card {
+  margin-top: 40px; text-align: center;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 30px;
+  padding: clamp(18px, 4vw, 36px);
+}
+.cake-stage { max-width: 560px; margin: 0 auto; }
+.cake-svg { width: 100%; height: auto; overflow: visible; }
+.candle { cursor: pointer; }
+.candle .flame {
+  transform-origin: 0px -26px;
+  animation: flick .6s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 6px rgba(255,179,71,.8));
+  transition: transform .35s ease, opacity .35s ease;
+}
+@keyframes flick {
+  from { transform: scaleY(1) rotate(-3deg); }
+  to { transform: scaleY(1.15) rotate(3deg); }
+}
+.candle .flame-out { transform: scale(0) !important; opacity: 0; animation: none; }
+.smoke {
+  fill: none; stroke: rgba(220,220,230,.7); stroke-width: 2; stroke-linecap: round;
+  animation: smokeRise 1.2s ease-out forwards;
+}
+@keyframes smokeRise {
+  from { opacity: .9; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-22px); }
+}
+.cake-status {
+  margin-top: 20px; font-family: var(--serif); font-style: italic;
+  font-size: clamp(18px, 4.6vw, 23px); color: var(--gold); min-height: 2.4em;
+}
+#cake-relight { margin-top: 8px; }
+
+/* ═══════════════════ game ═══════════════════ */
+.game-card {
+  position: relative; margin-top: 40px;
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 30px; overflow: hidden;
+}
+.game-topbar {
+  position: absolute; top: 14px; left: 0; right: 0; z-index: 2;
+  display: flex; justify-content: center; pointer-events: none;
+}
+.game-score {
+  font-family: var(--serif); font-size: 21px; font-weight: 600;
+  background: rgba(20,15,30,.55); border-radius: 999px; padding: 6px 20px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+#game-canvas {
+  display: block; width: 100%; height: clamp(360px, 60vh, 480px);
+  touch-action: none; cursor: none;
+}
+.game-overlay {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 22px; text-align: center; padding: 24px;
+  background: rgba(16,11,26,.72); backdrop-filter: blur(6px);
+}
+.game-overlay[hidden] { display: none; }
+.game-overlay p {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(19px, 4.8vw, 25px); max-width: 30ch; line-height: 1.5;
+}
+
+/* ═══════════════════ storybook ═══════════════════ */
+.story-card {
+  margin: 40px auto 0; width: min(560px, 100%);
+  background: linear-gradient(165deg, #2c1c42, #201431);
+  border: 1px solid rgba(255,165,192,.22);
+  border-radius: 26px; padding: clamp(20px, 4.5vw, 34px);
+  text-align: center;
+  box-shadow: 0 26px 60px rgba(0,0,0,.45);
+}
+.story-art svg { width: 100%; height: auto; max-height: 230px; }
+.story-text {
+  font-family: var(--serif); font-size: clamp(19px, 4.8vw, 24px);
+  line-height: 1.55; margin-top: 18px; min-height: 5.2em;
+}
+.story-card.turn-left .story-art, .story-card.turn-left .story-text { animation: pageL .5s ease both; }
+.story-card.turn-right .story-art, .story-card.turn-right .story-text { animation: pageR .5s ease both; }
+@keyframes pageL { from { opacity: 0; transform: translateX(34px); } to { opacity: 1; transform: none; } }
+@keyframes pageR { from { opacity: 0; transform: translateX(-34px); } to { opacity: 1; transform: none; } }
+.story-nav { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 18px; }
+.story-arrow {
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.25); font-size: 26px; line-height: 1;
+  color: var(--ink-dim); transition: all .25s;
+  display: flex; align-items: center; justify-content: center;
+}
+.story-arrow:hover:not(:disabled) { color: var(--ink); border-color: var(--pink); }
+.story-arrow:disabled { opacity: .3; cursor: default; }
+.story-dots { display: flex; gap: 9px; }
+.story-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(255,255,255,.22); transition: all .3s; padding: 0;
+}
+.story-dot.active { background: var(--pink); transform: scale(1.35); }
+
+/* ═══════════════════ red panda ═══════════════════ */
+.panda-wrap {
+  position: fixed; right: 14px; bottom: 14px; z-index: 30;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+}
+.panda-btn {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #3a2452, #241636);
+  border: 2px solid rgba(255,165,192,.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,.5), 0 0 24px rgba(251,111,146,.18);
+  padding: 8px; transition: transform .25s;
+  animation: pandaBob 3.4s ease-in-out infinite;
+}
+.panda-btn:hover { transform: scale(1.08); }
+.panda-btn svg { width: 100%; height: 100%; }
+@keyframes pandaBob { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+.panda-btn.bounce { animation: pandaBounce .7s cubic-bezier(.34,1.56,.64,1), pandaBob 3.4s ease-in-out .7s infinite; }
+@keyframes pandaBounce {
+  0% { transform: scale(1) rotate(0); }
+  30% { transform: scale(1.15) rotate(-8deg); }
+  60% { transform: scale(.96) rotate(6deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+.panda-bubble {
+  max-width: min(260px, calc(100vw - 40px));
+  background: var(--cream); color: #453546;
+  font-size: 14.5px; line-height: 1.5; font-weight: 400;
+  padding: 12px 16px; border-radius: 16px 16px 4px 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+}
+.panda-bubble.pop { animation: bubblePop .4s cubic-bezier(.34,1.56,.64,1); }
+@keyframes bubblePop { from { opacity: 0; transform: translateY(8px) scale(.85); } }
+
 /* ═══════════════════ footer / misc ═══════════════════ */
 .footer { text-align: center; padding: 60px 20px 80px; color: var(--ink-dim); font-style: italic; font-family: var(--serif); font-size: 17px; }
 

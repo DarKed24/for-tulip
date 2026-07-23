@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initReveals();
   initGarden();
   initStudio();
+  initCake();
+  initGame();
   initGallery();
+  initStorybook();
   initLetter();
+  initPanda();
 });
 
 /* ── content from config ──────────────────────────────── */
@@ -25,6 +29,12 @@ function injectContent() {
   set("studio-intro", CONFIG.studio.intro);
   set("gallery-title", CONFIG.gallery.title);
   set("gallery-intro", CONFIG.gallery.intro);
+  set("cake-title", CONFIG.cake.title);
+  set("cake-intro", CONFIG.cake.intro);
+  set("game-title", CONFIG.game.title);
+  set("game-intro", CONFIG.game.intro);
+  set("story-title", CONFIG.story.title);
+  set("story-intro", CONFIG.story.intro);
   set("letter-title", CONFIG.letter.title);
   document.querySelector(".gate-name").textContent = CONFIG.name;
   document.title = `for ${CONFIG.name} 🌷`;
@@ -140,7 +150,7 @@ function initPetals() {
 
 /* ── scroll reveals ───────────────────────────────────── */
 function initReveals() {
-  const els = document.querySelectorAll(".section-title, .section-intro, .studio-card, .polaroid, .envelope-zone");
+  const els = document.querySelectorAll(".section-title, .section-intro, .studio-card, .cake-card, .game-card, .story-card, .polaroid, .envelope-zone");
   els.forEach((el) => el.classList.add("reveal"));
   const io = new IntersectionObserver(
     (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("on")),

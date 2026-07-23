@@ -231,12 +231,7 @@ function initStudio() {
 
   /* ── bouquet ───────────────────────────────────────── */
 
-  const SLOTS = [
-    { x: 0, r: 0 }, { x: -26, r: -14 }, { x: 26, r: 14 },
-    { x: -46, r: -24 }, { x: 46, r: 24 }, { x: -14, r: -7 },
-    { x: 14, r: 7 }, { x: -36, r: -19 }, { x: 36, r: 19 },
-    { x: -6, r: -3 }, { x: 6, r: 3 }, { x: 20, r: 10 },
-  ];
+  const MAX_SHOWN = 12; // the vase holds twelve on display; the count keeps going
 
   function bouquetLoad() {
     return JSON.parse(localStorage.getItem("tulip.bouquet") || "[]");
@@ -245,21 +240,25 @@ function initStudio() {
   function renderBouquet() {
     const flowers = bouquetLoad();
     bouquetEl.innerHTML = "";
-    flowers.slice(0, SLOTS.length).forEach((idx, i) => {
-      const slot = SLOTS[i];
+    const shown = flowers.slice(0, MAX_SHOWN);
+    const n = shown.length;
+    // fan the stems out symmetrically from the vase mouth, never past its rim
+    const step = n > 1 ? Math.min(14, 56 / (n - 1)) : 0;
+    shown.forEach((idx, i) => {
+      const offset = (i - (n - 1) / 2) * step;
       const f = document.createElement("div");
       f.className = "bouquet-flower";
-      f.style.setProperty("--tilt", `rotate(${slot.r}deg)`);
-      f.style.marginLeft = slot.x * 2 + "px";
+      f.style.setProperty("--tilt", `rotate(${(offset * 0.7).toFixed(1)}deg)`);
+      f.style.left = `calc(50% + ${offset.toFixed(1)}px)`;
       f.style.animationDelay = i * 0.06 + "s";
       f.innerHTML = tulipSVG(idx, { sway: true, delay: i * 0.4 });
       bouquetEl.appendChild(f);
     });
-    const n = flowers.length;
+    const total = flowers.length;
     bouquetCount.textContent =
-      n === 0 ? "no tulips yet — fold your first one!" :
-      n === 1 ? "one perfect tulip 🌷" :
-      `${n} perfect tulips — a bouquet that never wilts`;
+      total === 0 ? "no tulips yet — fold your first one!" :
+      total === 1 ? "one perfect tulip 🌷" :
+      `${total} perfect tulips — a bouquet that never wilts`;
   }
 
   function addToBouquet() {

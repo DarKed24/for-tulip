@@ -103,11 +103,53 @@
       </div>
     </section>
 
+    <!-- CAKE -->
+    <section class="section cake" id="cake">
+      <h2 class="section-title" id="cake-title"></h2>
+      <p class="section-intro" id="cake-intro"></p>
+      <div class="cake-card">
+        <div class="cake-stage" id="cake-stage"></div>
+        <p class="cake-status" id="cake-status" aria-live="polite"></p>
+        <button class="btn btn-ghost" id="cake-relight" hidden>relight the candles</button>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section class="section game" id="game">
+      <h2 class="section-title" id="game-title"></h2>
+      <p class="section-intro" id="game-intro"></p>
+      <div class="game-card" id="game-wrap">
+        <div class="game-topbar">
+          <span class="game-score" id="game-score">0 / 19</span>
+        </div>
+        <canvas id="game-canvas"></canvas>
+        <div class="game-overlay" id="game-overlay">
+          <p id="game-overlay-text">Move the basket, catch nineteen tulips. Ready?</p>
+          <button class="btn btn-primary" id="game-start">let's play 🧺</button>
+        </div>
+      </div>
+    </section>
+
     <!-- PHOTOS -->
     <section class="section gallery" id="photos">
       <h2 class="section-title" id="gallery-title"></h2>
       <p class="section-intro" id="gallery-intro"></p>
       <div class="polaroids" id="polaroids"></div>
+    </section>
+
+    <!-- STORYBOOK -->
+    <section class="section story" id="story">
+      <h2 class="section-title" id="story-title"></h2>
+      <p class="section-intro" id="story-intro"></p>
+      <div class="story-card" id="story-card">
+        <div class="story-art" id="story-art"></div>
+        <p class="story-text" id="story-text"></p>
+        <div class="story-nav">
+          <button class="story-arrow" id="story-prev" aria-label="Previous page">‹</button>
+          <div class="story-dots" id="story-dots"></div>
+          <button class="story-arrow" id="story-next" aria-label="Next page">›</button>
+        </div>
+      </div>
     </section>
 
     <!-- LETTER -->
@@ -149,8 +191,12 @@
 
   <script src="config.js"></script>
   <script src="tulip.js"></script>
+  <script src="panda.js"></script>
   <script src="garden.js"></script>
   <script src="origami.js"></script>
+  <script src="cake.js"></script>
+  <script src="game.js"></script>
+  <script src="storybook.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
