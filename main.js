@@ -14,8 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initGallery();
   initStorybook();
   initEras();
+  initOpenWhen();
+  initCoupons();
+  initDaily();
   initLetter();
   initPanda();
+  initMidnightMagic();
 });
 
 /* ── content from config ──────────────────────────────── */
@@ -38,6 +42,12 @@ function injectContent() {
   set("story-intro", CONFIG.story.intro);
   set("eras-title", CONFIG.eras.title);
   set("eras-intro", CONFIG.eras.intro);
+  set("ow-title", CONFIG.openwhen.title);
+  set("ow-intro", CONFIG.openwhen.intro);
+  set("coupon-title", CONFIG.coupons.title);
+  set("coupon-intro", CONFIG.coupons.intro);
+  set("daily-title", CONFIG.daily.title);
+  set("daily-intro", CONFIG.daily.intro);
   set("letter-title", CONFIG.letter.title);
   document.querySelector(".gate-name").textContent = CONFIG.name;
   document.title = `for ${CONFIG.name} 🌷`;
@@ -153,7 +163,7 @@ function initPetals() {
 
 /* ── scroll reveals ───────────────────────────────────── */
 function initReveals() {
-  const els = document.querySelectorAll(".section-title, .section-intro, .studio-card, .cake-card, .game-card, .story-card, .polaroid, .envelope-zone");
+  const els = document.querySelectorAll(".section-title, .section-intro, .studio-card, .cake-card, .game-card, .story-card, .daily-card, .polaroid, .envelope-zone");
   els.forEach((el) => el.classList.add("reveal"));
   const io = new IntersectionObserver(
     (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("on")),

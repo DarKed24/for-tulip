@@ -152,6 +152,59 @@ const CONFIG = {
     outro: "Which era are we in right now? All of them. At once. Always.",
   },
 
+  openwhen: {
+    title: "Open When…",
+    intro:
+      "Little sealed envelopes for future moments. The rule: open them only when the moment is real. (Tap twice — the first tap just checks you mean it.)",
+    items: [
+      { label: "you miss me", text: "Close your eyes. There — I'm with you in under a second. Now text me. I was already missing you first, for the record." },
+      { label: "exams are winning", text: "You have survived 100% of your worst days so far, and you're the smartest person I know. One page at a time, princess. Then call me." },
+      { label: "you can't sleep", text: "Meet me at midnight — in your dreams, I mean. I'll be the one in the red panda costume. See you in five minutes." },
+      { label: "we've had a fight", text: "Whatever it was: I'm sorry, you're (probably) right, and I love you far more than I love being right. Come back. I saved you a tulip." },
+      { label: "you need a laugh", text: "You are dating a man who was publicly declared a red panda by royal decree and simply… accepted it. That's your taste. Sit with that." },
+      { label: "it's your 20th birthday", text: "Twenty?! This page is officially vintage. Come find me — your upgrade ships in person, with better origami. (That's a lie. The origami never improves.)" },
+    ],
+  },
+
+  coupons: {
+    title: "The Royal Coupon Book",
+    intro:
+      "Legal tender in this kingdom only. Tap redeem when you're cashing one in — stamps are permanent, so spend wisely.",
+    items: [
+      { title: "Winner of one (1) argument", fine: "No appeal. No take-backs. Use wisely." },
+      { title: "One movie night, your pick", fine: "Zero complaints from me. Even if it's a rewatch. Even THAT one." },
+      { title: "One hug, any hour, any distance", fine: "Redeemable at 3 a.m. Especially at 3 a.m." },
+      { title: "One 'you were right' said out loud", fine: "With eye contact. No mumbling." },
+      { title: "One dessert date, my treat", fine: "Calories redeemed alongside this coupon do not count." },
+      { title: "One full day of knight service", fine: "Bag carrying, snack fetching, dragon slaying. The works." },
+    ],
+    empty: "All coupons redeemed. The management is honoured — and slightly afraid.",
+  },
+
+  daily: {
+    title: "A Tulip a Day",
+    intro: "One small note, every day of being nineteen. Come back tomorrow — there'll be a new one waiting.",
+    teaser: "Your first daily tulip blooms tomorrow morning. Tonight, the garden is all yours.",
+    // One note per day, starting the day after her birthday. When the list
+    // runs out it loops — add more whenever you like.
+    notes: [
+      "Day one of nineteen. It already suits you.",
+      "Reminder: someone thought about you before breakfast today. It was me.",
+      "You looked lovely yesterday. I'm calling it now for today too.",
+      "Fact: red pandas imprint for life. Just saying.",
+      "Whatever today throws at you — you've beaten worse.",
+      "You are the best part of my average days.",
+      "Somewhere in our institute, a knight is being dramatically loyal to you.",
+      "Drink some water. Your hydration is a royal matter.",
+      "Today's forecast: 100% chance of being adored.",
+      "If today is heavy, hand me some of it. That's literally my job.",
+      "You make even Mondays negotiable.",
+      "New day, same answer: still you. Always you.",
+      "The garden's still blooming. So are you.",
+      "One more day of you being nineteen and me being lucky.",
+    ],
+  },
+
   letter: {
     title: "One last thing…",
     greeting: "Dear Tulip,",
