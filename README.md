@@ -27,8 +27,17 @@ Send *her* the plain link without the query string.
 ## What's inside
 
 - **Garden of Nineteen** — 19 tulip buds; tapping one blooms it and reveals a note. Progress is remembered on her device.
-- **Paper Tulip Studio** — interactive origami: she makes each fold herself, opens the petals, grows the stem, and every finished tulip joins a bouquet in a vase (also remembered).
+- **Paper Tulip Studio** — interactive origami: she makes each fold herself and every finished tulip joins a bouquet in a vase (also remembered).
+- **Nineteen Candles** — blow-out-the-candles cake with a wish at the end.
+- **Catch the Falling Tulips** — basket mini-game, win at 19.
 - **Photo wall** — polaroid frames.
+- **The Princess & Her Knight** — illustrated storybook (featuring the red panda).
+- **The Eras of Us** — 12 Taylor-era flip cards + friendship bracelet.
+- **Open When…** — sealed envelopes for future moments.
+- **Royal Coupon Book** — redeemable coupons with permanent stamps.
+- **A Tulip a Day** — a new tiny note every day of being nineteen (edit/extend in `config.js → daily.notes`).
 - **The letter** — sealed envelope, tap to open.
+- **Red panda mascot** — corner buddy with tappable one-liners.
+- **Secret**: every night at **11:57** the site slips into a three-minute midnight moment. Don't tell her — let her find it, or reveal it someday.
 
 No build step, no dependencies — plain HTML/CSS/JS.
