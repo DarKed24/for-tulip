@@ -505,6 +505,82 @@ a { color: inherit; text-decoration: none; }
 }
 .story-dot.active { background: var(--pink); transform: scale(1.35); }
 
+/* ═══════════════════ eras ═══════════════════ */
+.eras-grid {
+  margin-top: 44px;
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  max-width: 860px; margin-left: auto; margin-right: auto;
+}
+.era-card {
+  aspect-ratio: 3 / 4;
+  perspective: 800px;
+  -webkit-tap-highlight-color: transparent;
+  padding: 0;
+}
+.era-inner {
+  position: relative; width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.4,.1,.2,1);
+}
+.era-card.flipped .era-inner { transform: rotateY(180deg); }
+.era-card:hover .era-inner { box-shadow: none; }
+.era-face {
+  position: absolute; inset: 0;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  border-radius: 18px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px; padding: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 14px 34px rgba(0,0,0,.35);
+}
+.era-back {
+  transform: rotateY(180deg);
+  justify-content: center; text-align: center;
+}
+.era-back p {
+  font-family: var(--serif); font-style: italic; font-weight: 500;
+  font-size: clamp(13.5px, 3.4vw, 16.5px); line-height: 1.45;
+}
+.era-emoji { font-size: 34px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); }
+.era-name {
+  font-family: var(--serif); font-weight: 600; font-size: clamp(17px, 4.4vw, 21px);
+  letter-spacing: .04em;
+}
+.era-tap { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; opacity: .65; }
+
+/* era palettes — front uses the album's colors, back a deeper wash of the same */
+.era-debut     { background: linear-gradient(160deg, #7fd4c1, #3e9e8c); color: #10352e; }
+.era-fearless  { background: linear-gradient(160deg, #ffe29a, #d9a136); color: #4a3308; }
+.era-speaknow  { background: linear-gradient(160deg, #d5a6ea, #8d4fb8); color: #fff; }
+.era-red       { background: linear-gradient(160deg, #e8574f, #9e1c22); color: #ffe9e5; }
+.era-ts1989    { background: linear-gradient(160deg, #bfe3f5, #6fa8cf); color: #17364a; }
+.era-rep       { background: linear-gradient(160deg, #3a3a3e, #101013); color: #e8e8ea; }
+.era-lover     { background: linear-gradient(160deg, #ffd1dc, #a7c5f2 80%); color: #6d3a55; }
+.era-folklore  { background: linear-gradient(160deg, #d8d8d4, #8f8f8a); color: #2e2e2c; }
+.era-evermore  { background: linear-gradient(160deg, #d99a6c, #8a4a2b); color: #ffeede; }
+.era-midnights { background: linear-gradient(160deg, #3b4a7a, #141c3d); color: #cfd9f5; }
+.era-ttpd      { background: linear-gradient(160deg, #efe9df, #b0a58f); color: #3a352b; }
+.era-showgirl  { background: linear-gradient(160deg, #ff9d4d, #d95f12 70%, #77d6b7); color: #46200a; }
+
+.eras-outro {
+  text-align: center; margin-top: 36px;
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(18px, 4.6vw, 23px); color: var(--pink-soft);
+}
+.eras-bracelet {
+  margin: 30px auto 0; width: fit-content; max-width: 100%;
+  display: flex; gap: 6px; align-items: center; padding: 10px 18px;
+  border-bottom: 2px solid rgba(255,255,255,.25);
+  border-radius: 0 0 60px 60px;
+}
+.bead {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 500; color: #3a2438;
+  box-shadow: inset 0 -4px 8px rgba(0,0,0,.18), 0 3px 8px rgba(0,0,0,.3);
+}
+
 /* ═══════════════════ red panda ═══════════════════ */
 .panda-wrap {
   position: fixed; right: 14px; bottom: 14px; z-index: 30;

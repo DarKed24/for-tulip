@@ -82,6 +82,8 @@ const CONFIG = {
       "you look great today. the red panda never lies.",
       "he wrote and rewrote your letter like six times. I watched. it was adorable.",
       "psst — happy 19th. from both of us. 🌷",
+      "he made a whole Eras section for you. red pandas know every bridge by heart, obviously.",
+      "nineteen. in her prime, entering her most iconic era. that's you.",
     ],
   },
 
@@ -125,6 +127,29 @@ const CONFIG = {
         text: "And they lived happily — this is chapter nineteen of a story that's only getting started. The end. (For now.)",
       },
     ],
+  },
+
+  eras: {
+    title: "The Eras of Us",
+    intro:
+      "Twelve eras of Taylor, twelve eras of us. Tap each card to flip it. (Yes, this section was mandatory. I know exactly who I'm dating.)",
+    // Each card: era name + your own note about that "era" of you two.
+    // Rewrite the notes with real memories — one era per chapter of your story.
+    cards: [
+      { era: "Debut", emoji: "🤠", theme: "debut", text: "Every story has a first chapter. Ours started with a hello I still think about." },
+      { era: "Fearless", emoji: "✨", theme: "fearless", text: "The era of leaping before looking — first walks, first talks, zero regrets." },
+      { era: "Speak Now", emoji: "💜", theme: "speaknow", text: "Some things needed saying out loud. Telling you how I felt is still the bravest thing I've done." },
+      { era: "Red", emoji: "🧣", theme: "red", text: "The era of feeling everything, all at once, all the time. You still do that to me." },
+      { era: "1989", emoji: "🕊️", theme: "ts1989", text: "Everything bright, everything loud, everything possible — that's what you did to my world." },
+      { era: "Reputation", emoji: "🐍", theme: "rep", text: "Let them talk. We know exactly what we are." },
+      { era: "Lover", emoji: "💗", theme: "lover", text: "Soft mornings, long calls, heart eyes. This era never ended." },
+      { era: "Folklore", emoji: "🌲", theme: "folklore", text: "Quiet days count too. Some of my favourite memories are the uneventful ones with you." },
+      { era: "Evermore", emoji: "🍂", theme: "evermore", text: "Slow seasons end in gold. Ours always have." },
+      { era: "Midnights", emoji: "🌌", theme: "midnights", text: "Made for 11:57 phone calls and 'okay one more thing' before we sleep." },
+      { era: "TTPD", emoji: "🖋️", theme: "ttpd", text: "If I were a tortured poet, every poem would still end with your name." },
+      { era: "Showgirl", emoji: "🧡", theme: "showgirl", text: "Curtain up on nineteen — your most dazzling era yet." },
+    ],
+    outro: "Which era are we in right now? All of them. At once. Always.",
   },
 
   letter: {

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initGame();
   initGallery();
   initStorybook();
+  initEras();
   initLetter();
   initPanda();
 });
@@ -35,6 +36,8 @@ function injectContent() {
   set("game-intro", CONFIG.game.intro);
   set("story-title", CONFIG.story.title);
   set("story-intro", CONFIG.story.intro);
+  set("eras-title", CONFIG.eras.title);
+  set("eras-intro", CONFIG.eras.intro);
   set("letter-title", CONFIG.letter.title);
   document.querySelector(".gate-name").textContent = CONFIG.name;
   document.title = `for ${CONFIG.name} 🌷`;
